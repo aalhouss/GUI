@@ -52,7 +52,7 @@ public class Launchpage extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Schließen")) {
             int dialogButton = JOptionPane.YES_NO_OPTION;
-            JOptionPane.showConfirmDialog(null, "Would You Like to Save your Previous Note First?", "Warning", dialogButton);
+            JOptionPane.showConfirmDialog(null, "Would You Like to Save your Previous Work First?", "Warning", dialogButton);
 
             if (dialogButton == JOptionPane.YES_OPTION) {
                 System.exit(1);
