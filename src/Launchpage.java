@@ -1,11 +1,12 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Launchpage extends JFrame implements ActionListener {
-    private static JFrame frame;
+    static JFrame frame;
     private static JDialog dialog;
     private static JPanel mainGui;
     private static JPanel buttonPanel;
@@ -51,15 +52,16 @@ public class Launchpage extends JFrame implements ActionListener {
     }
     public void actionPerformed(ActionEvent e) {
         if (e.getActionCommand().equals("Schließen")) {
-            int dialogButton = JOptionPane.YES_NO_OPTION;
-            JOptionPane.showConfirmDialog(null, "Would You Like to Save your Previous Work First?", "Warning", dialogButton);
+            int dialogButton = JOptionPane.showConfirmDialog (null, "Are you sure?","WARNING",JOptionPane.YES_NO_OPTION);
 
-            if (dialogButton == JOptionPane.YES_OPTION) {
-                System.exit(1);
-            }
+            if(dialogButton == JOptionPane.YES_OPTION) {
+                System.exit(0);}else {remove(dialogButton);}
+
         }  if (e.getSource()==menusimpleitemA) {
             cursor c=new cursor();
-            // c.setVisible(true);
+            int y=c.getcursortype();
+            frame.setCursor(new Cursor(y));
+
         }
     }
 }
