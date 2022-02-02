@@ -65,6 +65,7 @@ public class Launchpage extends JFrame implements ActionListener {
         frame.setVisible(true);
 
     }
+
     // actionlistner methode , where after click start doing prefered things
     public void actionPerformed(ActionEvent e) {
         //like here closing after menuitem schließen clicked , with  a confirmation message

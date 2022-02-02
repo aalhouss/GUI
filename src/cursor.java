@@ -14,7 +14,8 @@ class cursor extends JFrame implements ActionListener {
     static JLabel ls;
 
     // launchpage object
-    Launchpage lp=new Launchpage();
+
+
 
     // default constructor, it will be called in the other class
     cursor() {
@@ -48,105 +49,109 @@ class cursor extends JFrame implements ActionListener {
         button.addActionListener(this);
         button1.addActionListener(this);
 //Make dialog visible
+        //gui_main.lp.setVisible(false);
         dialog.setVisible(true);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        //Launchpage gui_main.gui_main.lp=new Launchpage();
+        
+        gui_main.lp.setVisible(false);
         //decalring a button text string to get the written text from the textfield
         String buttonText = new String(((JButton) e.getSource()).getText());
 
         //making changes for evry text input and at the same time pressing the button übernehmen
-        //with dialogsetcursor it will change the cursor in the dialog , and lp as launchpage object will change it in the main , and it also will change the titel to the cursor name
+        //with dialogsetcursor it will change the cursor in the dialog , and gui_main.lp as launchpage object will change it in the main , and it also will change the titel to the cursor name
 
         //for example hier changing the mouse cursor to CROSSHAIR an the title to CROSSHAIR CURSOR
         if (tf.getText().equals("CROSSHAIR") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
-            lp.getFrame().setTitle("CROSSHAIR CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.CROSSHAIR_CURSOR));
+            gui_main.lp.getFrame().setTitle("CROSSHAIR CURSOR");
         }
         else if (tf.getText().equals("E_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.E_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.E_RESIZE_CURSOR));
-            lp.getFrame().setTitle("E_RESIZE CURSOR");
+           gui_main.lp.getFrame().setCursor(new Cursor(Cursor.E_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("E_RESIZE CURSOR");
         }
         else if (tf.getText().equals("HAND") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.HAND_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.HAND_CURSOR));
-            lp.getFrame().setTitle("HAND CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.HAND_CURSOR));
+            gui_main.lp.getFrame().setTitle("HAND CURSOR");
         }
         else if (tf.getText().equals("MOVE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.MOVE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.MOVE_CURSOR));
-            lp.getFrame().setTitle("MOVE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.MOVE_CURSOR));
+            gui_main.lp.getFrame().setTitle("MOVE CURSOR");
         }
         else if (tf.getText().equals("N_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.N_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.N_RESIZE_CURSOR));
-            lp.getFrame().setTitle("N_RESIZE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.N_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("N_RESIZE CURSOR");
         }
 
         else if (tf.getText().equals("NE_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.NE_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.NE_RESIZE_CURSOR));
-            lp.getFrame().setTitle("NE_RESIZE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.NE_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("NE_RESIZE CURSOR");
 
         }
         else if (tf.getText().equals("NW_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.NW_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.NW_RESIZE_CURSOR));
-            lp.getFrame().setTitle("NW_RESIZE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.NW_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("NW_RESIZE CURSOR");
         }
         else if (tf.getText().equals("SE_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.SE_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.SE_RESIZE_CURSOR));
-            lp.getFrame().setTitle("SE_RESIZE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.SE_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("SE_RESIZE CURSOR");
         }
         else if (tf.getText().equals("SW_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.SW_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.SW_RESIZE_CURSOR));
-            lp.getFrame().setTitle("SW_RESIZE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.SW_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("SW_RESIZE CURSOR");
         }
         else if (tf.getText().equals("W_RESIZE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.W_RESIZE_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.W_RESIZE_CURSOR));
-            lp.getFrame().setTitle("W_RESIZE CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.W_RESIZE_CURSOR));
+            gui_main.lp.getFrame().setTitle("W_RESIZE CURSOR");
         }
         else if (tf.getText().equals("TEXT") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.TEXT_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.TEXT_CURSOR));
-            lp.getFrame().setTitle("TEXT CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.TEXT_CURSOR));
+            gui_main.lp.getFrame().setTitle("TEXT CURSOR");
         }
         else if (tf.getText().equals("WAIT") && e.getActionCommand().equals("Übernehmen")) {
             // dialog.setCursor(new Cursor(Cursor.WAIT_CURSOR));
             startWaitCursor(dialog.getRootPane());
-            lp.getFrame().setCursor(new Cursor(Cursor.WAIT_CURSOR));
-            lp.getFrame().setTitle("WAIT CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.WAIT_CURSOR));
+            gui_main.lp.getFrame().setTitle("WAIT CURSOR");
         }
         else if (tf.getText().equals("CUSTOM") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.CUSTOM_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.CUSTOM_CURSOR));
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.CUSTOM_CURSOR));
         }
         else  if (tf.getText().equals("DEFAULT") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
-            lp.getFrame().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
-            lp.getFrame().setTitle("DEFAULT CURSOR");
+            gui_main.lp.getFrame().setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+            gui_main.lp.getFrame().setTitle("DEFAULT CURSOR");
         }// in this example , we are creating a customised cursor , here a smily face closing hes left eye
         else  if (tf.getText().equals("SMILE") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
                     new ImageIcon("smile.png").getImage(),
                     new Point(0,0),"custom cursor"));
-            lp.getFrame().setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+            gui_main.lp.getFrame().setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
                     new ImageIcon("smile.png").getImage(),
                     new Point(0,0),"custom cursor"));
-            lp.getFrame().setTitle("SMILY_CUSTOM CURSOR");
+            gui_main.lp.getFrame().setTitle("SMILY_CUSTOM CURSOR");
         }//in this example chaning also the cursor for a customised, but here i am bullying my friend
         else  if (tf.getText().equals("WASSIM") && e.getActionCommand().equals("Übernehmen")) {
             dialog.setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
                     new ImageIcon("wassim.jpeg").getImage(),
                     new Point(0,0),"custom cursor"));
-            lp.getFrame().setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
+            gui_main.lp.getFrame().setCursor(Toolkit.getDefaultToolkit().createCustomCursor(
                     new ImageIcon("smile.png").getImage(),
                     new Point(0,0),"custom cursor"));
         }
