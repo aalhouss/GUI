@@ -2,9 +2,9 @@
 //main class
 public class gui_main {
 
-static Launchpage lp;
+static Launchpage launchpage;
     public static void main(String args[]) {
-         lp=new Launchpage();
+         launchpage=new Launchpage();
 
     }
 }

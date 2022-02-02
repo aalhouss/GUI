@@ -12,9 +12,9 @@ import javax.swing.ImageIcon;
 public class Launchpage extends JFrame implements ActionListener {
     private static JFrame frame;
     private static JDialog dialog;
-    private static  JMenuItem menusimpleitemA, menusimpleitemB;
-    private static   JMenuBar mbar;
-    private static   JMenu menu1;
+    private static  JMenuItem datei_einlesen, schliessen;
+    private static   JMenuBar menuBar;
+    private static   JMenu datei;
     private  static  cursor c=null;
 
     Launchpage(){
@@ -26,21 +26,21 @@ public class Launchpage extends JFrame implements ActionListener {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         dialog = new JDialog(frame, "Dialog", true);
         // menubar zur Auswählen
-        mbar = new JMenuBar();
-        frame.setJMenuBar(mbar);
+        menuBar = new JMenuBar();
+        frame.setJMenuBar(menuBar);
         //erste menu (und die einzige)
-        menu1 = new JMenu("Datei");
-        mbar.add(menu1);
+        datei = new JMenu("Datei");
+        menuBar.add(datei);
         //menuitems
-        menusimpleitemA = new JMenuItem("Mauszeiger einlesen");
-        menu1.add(menusimpleitemA);
-        menu1.add(new JSeparator());
-        menusimpleitemB = new JMenuItem("Schließen");
-        menu1.add(menusimpleitemB);
+        datei_einlesen = new JMenuItem("Mauszeiger einlesen");
+        datei.add(datei_einlesen);
+        datei.add(new JSeparator());
+        schliessen = new JMenuItem("Schließen");
+        datei.add(schliessen);
 
         // Actionlistner to react when item is clicked
-        menusimpleitemA.addActionListener(this);
-        menusimpleitemB.addActionListener(this);
+        datei_einlesen.addActionListener(this);
+        schliessen.addActionListener(this);
 
         //to close the frame after showing a confirmation dialog , and let the frame to be closed with ALT+F4
         frame.addWindowListener(new WindowAdapter() {
@@ -75,7 +75,7 @@ public class Launchpage extends JFrame implements ActionListener {
             if(dialogButton == JOptionPane.YES_OPTION) {
                 System.exit(0);}else {remove(dialogButton);}
             //if the first menu item is clicked , call a cursor object, where the dialog will be open
-        }  if (e.getSource()==menusimpleitemA) {
+        }  if (e.getSource()==datei_einlesen) {
             c=new cursor();
         }
 
