@@ -4,7 +4,7 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import javax.swing.*;
 class cursor extends JFrame implements ActionListener {
     // frame
-    static JFrame frame;
+
     //dialogbox
     static JDialog dialog;
 
@@ -12,7 +12,7 @@ class cursor extends JFrame implements ActionListener {
     static Label l;
     //textfield to write texts, here to write mouse cursor filenames
     static JTextField tf;
-    static JLabel ls;
+
 
     // launchpage object
 
@@ -49,8 +49,9 @@ class cursor extends JFrame implements ActionListener {
         //add action Listner to make the click react
         submit.addActionListener(this);
         schliessen.addActionListener(this);
+
 //Make dialog visible
-        //gui_main.lp.setVisible(false);
+
         dialog.setVisible(true);
 
     }
@@ -61,7 +62,7 @@ class cursor extends JFrame implements ActionListener {
         
 
         //decalring a button text string to get the written text from the textfield
-        String buttonText = new String(tf.getText());
+        String buttonText = tf.getText();
         if(e.getActionCommand().equals("Übernehmen")){
             switch (buttonText){
                ////making changes for evry text input and at the same time pressing the button übernehmen
