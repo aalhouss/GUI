@@ -1,0 +1,35 @@
+ Ausarbeitung für java: 
+Ich habe beide bibliotheken , java swing und java aw benutzt, aber große Teil des Projekt ist mit awt gearbeitet
+und ich habe auch javax benutzt , weil ich einfach ein Bild als Background gesetzt.
+in mein Java Projekt habe ich 3 Klassen erstellt: 
+-Hauptklasse , enthält nur main methode und füht das Programm aus
+-Launchpage , spezifiert und beschreibt den haupt Fenster
+-Cursor , spezifiert und beschreibt den Dialog Fenster. 
+
+In Hauptklasse wird ein Launchpage Objekt erstellt.und dann ausgeführt. 
+
+Wie oben erwähnt , Launchpage klasse definiert den Hauptfenster. Als erstet erbt die klasse von Jframe und implemntiert den ActionListener 
+interface , um  Reaktionen ( zb Button drücken) zu reagieren. 
+in den Konstruktor wird die eigenschaften von Fenster definiert , wie Name(Gui-Hausarbeit) , Größe(breite 350, laenge 250)
+und default Standort .Wenn man den Fnester schließen möchte , soll er spezielle Anweisungen definieren , für den normal Close 
+(also X)  wurde die setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE) angewendet, und auch für schließen durch alt+f4 habe ich auch addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) benutzt.
+ Ein Windows Listener wird realisirt , in dieser Mtehode wird auch ein warning message
+ erzeugt , wenn den Benutzer ertmal schlißen, falls er mit yes bestätigt, schließst sonst mahct nichts.: 
+JOptionPane.showConfirmDialog(frame,
+                        "Do you want to Exit ?", "Exit Confirmation : ",
+                        JOptionPane.YES_NO_OPTION); frame ist aktuelle fenster , " " ist ein String , wo den Warning Text angezeigt wird ,dritte Parameter definiert den Type , wie hier nur YesNo.
+
+mit no wird frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE); nichts gemacht , mit yes geshcloßen.
+
+Zu nächst, habe den Background mit Th Köln Logo ersetzt , das dient nur zur Schönheit des Fenster.  
+try {
+            frame.setContentPane(new JLabel(new ImageIcon(ImageIO.read(new File("thkoeln.png")))));
+        } catch (IOException e) {
+            e.printStackTrace();
+
+        }
+Mit die einfache und eindeutige methode kann man den Fenster visible
+frame.setVisible(true); . 
+
+In Action Listener wird wie oben erklärt , falls den Benutzer den Button Schlißen drückt. 

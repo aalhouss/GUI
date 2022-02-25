@@ -24,7 +24,7 @@ public class Launchpage extends JFrame implements ActionListener {
         frame.setSize(350, 250);
         //for exit
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        dialog = new JDialog(frame, "Dialog", true);
+       // dialog = new JDialog(frame, "Dialog", true);
         // menubar zur Auswählen
         menuBar = new JMenuBar();
         frame.setJMenuBar(menuBar);
@@ -77,11 +77,17 @@ public class Launchpage extends JFrame implements ActionListener {
             //if the first menu item is clicked , call a cursor object, where the dialog will be open
         }  if (e.getSource()==datei_einlesen) {
             c=new cursor();
+            //Filechos f=new Filechos();
         }
 
     }
     // help methode to use frame globally
     public JFrame getFrame(){
         return frame;
+    }
+
+    public void Setcurortitle(int Cursor_enum,String titel){
+        Hauptklasse.launchpage.getFrame().setCursor(new Cursor(Cursor_enum));
+        Hauptklasse.launchpage.getFrame().setTitle(titel);
     }
 }
