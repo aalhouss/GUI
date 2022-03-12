@@ -66,7 +66,7 @@ public static String s;
         fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
          filter = new FileNameExtensionFilter(
                 "BMP Images", "bmp");
-       // fileChooser.setFileFilter(filter);
+       fileChooser.setFileFilter(filter);
          choice=JOptionPane.NO_OPTION;
         //do {
              result = fileChooser.showOpenDialog(this);
@@ -110,6 +110,7 @@ public static String s;
 
           //  dialog.setCursor(c);
         }
+        //when the user input wrong format , it will show a message dialog asking him to repeat
         if(e.getActionCommand().equals("Übernehmen") && !tf.getText().substring(tf.getText().length()-4).equals(".bmp")){
             JOptionPane.showMessageDialog(null, "Ungültige Mousezeiger Dateiname ");
             tf.setText("");

@@ -32,4 +32,21 @@ try {
 Mit die einfache und eindeutige methode kann man den Fenster visible
 frame.setVisible(true); . 
 
-In Action Listener wird wie oben erklärt , falls den Benutzer den Button Schlißen drückt. 
+In Action Listener wird wie oben erklärt , falls den Benutzer den Button Schlißen drückt. schließt den Fenster. 
+Wenn man aber das Menuitem Mousezeiger wählen , wird einen anderen Fenster(dialog) geöffnet. das passiert mit dem Aufruf von Cursor objekt, also c=new cursor. 
+getFrame(), und Setczrsortitle() sind 2 hilfe metnoden , und beide hilfen bei Einsetzung des Zeigers global .
+
+CursorKlasse:
+in cursor klasse geschieht alles, nach dem Aufruf des Objekts( c) wird erstmal direkt einen Dialog mit ein Textfield  und 2 Buttons angezeigt. Ein Button ist Übernhemen, wo nach dem click den Mousezeiger angepasst wird , und die andere ist Schließen.
+Dannach wird einen Jfilechooser geöffnet , wo den Benutzer ein Datei wählen kann . In Unsere Programm soll nur bmp File gewählt, ansosnt wird eine Fehlermeldung angezeigt.Ich habe gedacht, dass besser ist , wenn man die Datein zu bmp  mit Filter limitiert. 
+Dann kann den Benutzer eigentlich jetzt nur bmp Datein wählen , da nur bmp  in Selector angezeigt. 
+Die Aufgabestellung fordert , dass ich mindestens 2 bmp files erstelle . Aber ich habe auch dazu entschieden , dass ich den Benutzer die Möglichkeit  in Textfield anzupassen geben. Der Benutzer kann die Integrierte Mouse Zeigers einsetzen , nur mit der Name . Zb wenn er WAIT.bmp schreibt , wird den Zeiger als Loading Symbole angepasst. 
+Ich habe explizit .bmp file eingesetzt , sodass er immer bmp Datein anpasst , und beim Fehler einen Warningbox anzeigen. Der Zeiger wird durch dialog.setCursor() in dialogbox anpassen , und mit der Methode Setcursortitel() global in hauptfenster auch .Am Ende  , wenn man Schließen klickt , wird einen Messagebox mit janein angezeigt , und warten auf Bestätigung . 
+
+Am Ende  java awt und swing sind beide jetzt veraltet , und javafx ist die aktuelle  Bibliothek . Java Awt
+ist Java ursprüngliches  , plattformabhängig Widget-Grafik und Gui  während Swing ein GUi Widget toolkit. Swing ist die Erweitung von AWT.
+Ich habe vemerkt dass awt komponenten größer , brauchen mehr speicher , und die Ausführung ist langsam , während swing komponenten leichter sind , Ausführung schneller , und benötigt weniger Platz im Vergleich mit JavaAWT
+Nach der kleine Unterscheidung zwsichen die beide , ich finde java swing besser, einfacher zur Benutzung. 
+ Quelle: 
+oracle.com
+stackoverflow.
